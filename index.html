@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملخص العلوم الحياتية - قيس جازي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /* خلفية تشبه الورق القديم */
+            background-color: #eaddcf;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+            font-family: 'Tajawal', sans-serif;
+            color: #3b2f2f;
+        }
+        .book-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #fdfbf7;
+            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            box-shadow: 
+                -10px 0 20px rgba(0,0,0,0.1) inset, 
+                15px 15px 40px rgba(0,0,0,0.15),
+                0 0 10px rgba(0,0,0,0.05);
+            border-radius: 4px 15px 15px 4px;
+            padding: 50px 60px;
+            border-right: 12px solid #8c5a35; /* كعب الكتاب */
+            position: relative;
+        }
+        .book-container::before {
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0; right: 0; width: 40px;
+            background: linear-gradient(to left, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+            pointer-events: none;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Amiri', serif;
+            color: #6b2e2e;
+        }
+        .section-title {
+            border-bottom: 2px solid #6b2e2e;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .highlight-box {
+            background-color: #f4e8d3;
+            border: 1px dashed #c4a47c;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+        .question-box {
+            background-color: #faf7f0;
+            border-right: 4px solid #8c5a35;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        input[type="radio"] {
+            accent-color: #8c5a35;
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+        .btn-submit {
+            background-color: #6b2e2e;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-family: 'Amiri', serif;
+            transition: background-color 0.3s;
+            border: 2px solid #4a1f1f;
+        }
+        .btn-submit:hover {
+            background-color: #8c5a35;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <div class="book-container">
+        <!-- Header -->
+        <div class="text-center mb-10 border-b-2 border-[#8c5a35] pb-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">ملخص العلوم الحياتية الشامل</h1>
+            <h2 class="text-2xl text-[#8c5a35] mb-2">للصف التاسع - الفصل الثاني</h2>
+            <div class="inline-block bg-[#6b2e2e] text-[#fdfbf7] px-6 py-2 rounded-full font-bold text-lg mt-4 shadow-md">
+                من إعداد: قيس جازي
+            </div>
+        </div>
+
+        <!-- Content Section 1 -->
+        <section>
+            <h2 class="text-3xl font-bold section-title">القسم الأول: الأنسجة الحيوانية</h2>
+            <p class="text-lg leading-relaxed mb-4">
+                يبدأ تنظيم الجسم من: <strong>خلية &larr; نسيج &larr; عضو &larr; جهاز</strong>. تصنف الأنسجة الحيوانية إلى أربعة أنواع رئيسية:
+            </p>
+
+            <h3 class="text-2xl font-bold mb-2">1. الأنسجة الطلائية</h3>
+            <ul class="list-disc list-inside text-lg leading-relaxed mb-4 space-y-2">
+                <li><strong>الوظيفة:</strong> تغطي سطح الجسم وتبطن التجاويف الداخلية.</li>
+                <li><strong>الخصائص:</strong> متراصة، سريعة الانقسام (لتعويض التالف)، لا تحتوي أوعية دموية، ترتكز على غشاء قاعدي.</li>
+                <li><strong>حسب الطبقات:</strong> بسيط (طبقة واحدة كالحويصلات الهوائية)، طبقي (عدة طبقات كالجلد)، وطبقي كاذب (يبدو كعدة طبقات لاختلاف أطوال الخلايا لكنه طبقة واحدة كبطانة القصبة الهوائية).</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold mb-2">2. الأنسجة الضامة</h3>
+            <p class="text-lg leading-relaxed mb-2">تربط الأنسجة وتدعم الأعضاء، تحوي مادة أساسية بين خلوية وألياف (كولاجين ومرنة). أنواعها:</p>
+            <ul class="list-disc list-inside text-lg leading-relaxed mb-4 space-y-2">
+                <li><strong>الرخو:</strong> الأكثر انتشاراً، يربط الأنسجة.</li>
+                <li><strong>الدهني:</strong> يخزن الدهون للطاقة، نواته طرفية.</li>
+                <li><strong>الكثيف:</strong> غني بالكولاجين، يكوّن الأوتار (تربط العضلات بالعظام) والأربطة (عظام بعظام).</li>
+                <li><strong>الدم:</strong> نسيج سائل (بلازما)، ينقل الغازات ويحمي الجسم.</li>
+                <li><strong>العظم والغضروف:</strong> للدعامة، العظم يتميز بنظام هافرس، والغضروف يخلو من الأوعية الدموية.</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold mb-2">3. الأنسجة العضلية</h3>
+            <ul class="list-disc list-inside text-lg leading-relaxed mb-4 space-y-2">
+                <li><strong>الهيكلية:</strong> مخططة، إرادية، متعددة النوى، ترتبط بالعظام.</li>
+                <li><strong>القلبية:</strong> مخططة، لا إرادية، وحيدة النواة. تحتوي <strong>أقراص بينية</strong> لتنظيم الانقباض ككتلة واحدة.</li>
+                <li><strong>الملساء:</strong> غير مخططة، لا إرادية، مغزلية الشكل (في الأمعاء والأوعية الدموية).</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold mb-2">4. الأنسجة العصبية</h3>
+            <p class="text-lg leading-relaxed mb-4">
+                تتكون من العصبونات (حسية، محركة، موصلة) والخلايا الدبقية (مثل خلايا شوان التي تسرع نقل السيال العصبي وتدعم العصبونات).
+            </p>
+        </section>
+
+        <!-- Content Section 2 -->
+        <section>
+            <h2 class="text-3xl font-bold section-title">القسم الثاني: الأنسجة النباتية</h2>
+            
+            <h3 class="text-2xl font-bold mb-2">1. الأنسجة المولدة (المرستيمية)</h3>
+            <p class="text-lg leading-relaxed mb-4">
+                خلايا حية تنقسم باستمرار للنمو (صغيرة، جدرها رقيقة، نواها كبيرة). أنواعها:
+                القمية (لزيادة الطول في الجذور والسيقان)، البينية (في ذوات الفلقة)، والجانبية (لزيادة السُمك والقطر).
+            </p>
+
+            <h3 class="text-2xl font-bold mb-2">2. الأنسجة الدائمة</h3>
+            <ul class="list-disc list-inside text-lg leading-relaxed mb-4 space-y-2">
+                <li><strong>البشرة:</strong> تغطي النبات للحماية، تفرز <strong>الكيوتيكل</strong> الشمعي لمنع تبخر الماء، وتحوي <strong>الثغور</strong> لتبادل الغازات والشعيرات الجذرية للامتصاص.</li>
+                <li><strong>الأنسجة الوعائية:</strong> 
+                    <br>- <strong>الخشب:</strong> خلايا ميتة تنقل الماء والأملاح من الجذر للأعلى باتجاه واحد.
+                    <br>- <strong>اللحاء:</strong> خلايا حية تنقل الغذاء الجاهز (أنابيب غربالية وخلايا مرافقة توفر الطاقة).
+                </li>
+                <li><strong>الأنسجة الأساسية:</strong>
+                    <br>- <strong>البرنشيمي:</strong> حي، جدر رقيقة، للتهوية والبناء الضوئي وتخزين النشا (كالبطاطا).
+                    <br>- <strong>الكولنشيمي:</strong> حي، جدر مغلظة غير منتظمة للدعم والمرونة.
+                    <br>- <strong>الإسكلرنشيمي:</strong> ميت، صلب جداً بسبب السيليلوز واللغنين (للدعامة كقشرة الجوز).
+                </li>
+            </ul>
+        </section>
+
+        <!-- Content Section 3 -->
+        <section>
+            <h2 class="text-3xl font-bold section-title">القسم الثالث: الأنظمة البيئية ودراسة الجماعات</h2>
+            
+            <h3 class="text-2xl font-bold mb-2">نمو الجماعة الحيوية</h3>
+            <p class="text-lg leading-relaxed mb-4">
+                يزداد حجم الجماعة بـ (الولادات + الهجرة للداخل) ويقل بـ (الوفيات + الهجرة للخارج).
+            </p>
+
+            <h3 class="text-2xl font-bold mb-2">طرق دراسة الجماعات (تقدير الحجم)</h3>
+            <ul class="list-disc list-inside text-lg leading-relaxed mb-4 space-y-2">
+                <li><strong>المربع القياسي:</strong> للكائنات غير المتحركة كالنباتات.</li>
+                <li><strong>القطاع الخطي:</strong> شريط عرضي لدراسة التوزيع بتأثير عامل بيئي.</li>
+                <li><strong>وضع العلامات (معامل لينكولن):</strong> للحيوانات المتحركة. (حجم الجماعة = عدد العينة الأولى × عدد العينة الثانية ÷ عدد الأفراد الحاملين للعلامة).</li>
+                <li><strong>طرق أخرى:</strong> الملاحظة المرئية، التتبع عن بعد (الأطواق للنمور والفيلة)، والتجارب المخبرية أو الميدانية، والتحليل الإحصائي لمعرفة العلاقات (طردية/عكسية).</li>
+            </ul>
+        </section>
+
+        <!-- Content Section 4 -->
+        <section>
+            <h2 class="text-3xl font-bold section-title">القسم الرابع: تدفق الطاقة والأهرامات البيئية</h2>
+            
+            <h3 class="text-2xl font-bold mb-2">مستويات التغذية والمحللات</h3>
+            <p class="text-lg leading-relaxed mb-4">
+                تبدأ السلسلة بـ <strong>المنتجات</strong> (تصنع غذائها)، ثم <strong>المستهلكات</strong> (أولى، ثانية، كبرى). أما <strong>المحللات</strong> فتعيد المواد للتربة ونادراً ما تُرسم في السلسلة.<br>
+                <em>ملاحظة خطيرة:</em> السموم الكيميائية (مثل DDT) لا تُهضم، بل تتراكم ليكون تركيزها الأعلى في المستهلكات الكبرى (قمة السلسلة).
+            </p>
+
+            <h3 class="text-2xl font-bold mb-2">انتقال الطاقة والأهرامات (قاعدة 10%)</h3>
+            <p class="text-lg leading-relaxed mb-4">
+                تنتقل <strong>10% فقط</strong> من الطاقة للمستوى التالي، بينما يُفقد 90% كحرارة (عملية التنفس) أو فضلات.
+            </p>
+            <ul class="list-disc list-inside text-lg leading-relaxed mb-4 space-y-2">
+                <li><strong>هرم الطاقة:</strong> يمثل كمية الطاقة، <strong>لا يمكن أن يكون مقلوباً أبداً</strong>.</li>
+                <li><strong>هرم الأعداد:</strong> يمثل عدد الكائنات، قد يكون مقلوباً (مثل شجرة واحدة عليها مئات الحشرات).</li>
+                <li><strong>هرم الكتلة الحيوية:</strong> يعبر عن الكتلة الجافة، قد يكون مقلوباً في البيئات المائية (الكتلة الجافة للعوالق النباتية أقل من الحيوانية).</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold mb-2">الدورات البيوجيوكيميائية</h3>
+            <p class="text-lg leading-relaxed mb-4">
+                يتم تدوير المواد (الكربون، النيتروجين، الفسفور) باستمرار.<br>
+                - <strong>الكربون:</strong> يتم تثبيته بالبناء الضوئي ويتحرر بالتنفس وحرق الوقود.<br>
+                - <strong>النيتروجين:</strong> يتم تثبيته بالبرق أو البكتيريا، وتحوله بكتيريا النترتة (من نيتريت لنترات)، وتوجد بكتيريا تختزله لغاز مرة أخرى.<br>
+                - <strong>الفسفور:</strong> دورته بطيئة ولا تمر بالغلاف الجوي (تعتمد على تعرية الصخور).
+            </p>
+        </section>
+
+        <!-- Quiz Section -->
+        <section class="mt-16 border-t-4 border-[#8c5a35] pt-10">
+            <h2 class="text-4xl font-bold text-center mb-4">اختبار التميز الشامل</h2>
+            <p class="text-center text-lg mb-10 text-gray-700">اختبر معلوماتك من خلال 25 سؤالاً اختيار من متعدد. أجب عن جميع الأسئلة ثم اضغط على زر "إرسال الإجابات" لمعرفة نتيجتك.</p>
+
+            <form id="quizForm" class="space-y-6">
+                
+                <!-- Q1 -->
+                <div class="question-box" id="q1-box">
+                    <p class="text-xl font-bold mb-3">1. ما هو الترتيب الصحيح لمستويات التنظيم في أجسام الكائنات الحية؟</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q1" value="a"> أ) نسيج &larr; خلية &larr; عضو &larr; جهاز</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q1" value="b"> ب) خلية &larr; نسيج &larr; عضو &larr; جهاز</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q1" value="c"> ج) خلية &larr; عضو &larr; نسيج &larr; جهاز</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q1" value="d"> د) عضو &larr; نسيج &larr; خلية &larr; جهاز</label>
+                </div>
+
+                <!-- Q2 -->
+                <div class="question-box" id="q2-box">
+                    <p class="text-xl font-bold mb-3">2. أي الأنسجة الآتية تبطن التجاويف الداخلية للجسم ولا تحتوي على أوعية دموية؟</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q2" value="a"> أ) الأنسجة العضلية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q2" value="b"> ب) الأنسجة الضامة</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q2" value="c"> ج) الأنسجة العصبية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q2" value="d"> د) الأنسجة الطلائية</label>
+                </div>
+
+                <!-- Q3 -->
+                <div class="question-box" id="q3-box">
+                    <p class="text-xl font-bold mb-3">3. النسيج الطلائي الذي يبدو مكوناً من عدة طبقات لاختلاف أطوال خلاياه ومستوى النوى، ولكنه في الحقيقة طبقة واحدة ترتكز على الغشاء القاعدي هو:</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q3" value="a"> أ) الطلائي البسيط</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q3" value="b"> ب) الطلائي الطبقي</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q3" value="c"> ج) الطلائي الطبقي الكاذب</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q3" value="d"> د) الطلائي الحرشفي الطبقي</label>
+                </div>
+
+                <!-- Q4 -->
+                <div class="question-box" id="q4-box">
+                    <p class="text-xl font-bold mb-3">4. ما هو النسيج الضام المسؤول عن ربط العضلات بالعظام (الأوتار)؟</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q4" value="a"> أ) النسيج الضام الرخو</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q4" value="b"> ب) النسيج الضام الكثيف</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q4" value="c"> ج) النسيج الغضروفي</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q4" value="d"> د) النسيج الدهني</label>
+                </div>
+
+                <!-- Q5 -->
+                <div class="question-box" id="q5-box">
+                    <p class="text-xl font-bold mb-3">5. العضلات المخططة، واللاإرادية، والتي تحتوي على أقراص بينية هي:</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q5" value="a"> أ) العضلات الهيكلية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q5" value="b"> ب) العضلات الملساء</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q5" value="c"> ج) العضلة القلبية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q5" value="d"> د) الأربطة</label>
+                </div>
+
+                <!-- Q6 -->
+                <div class="question-box" id="q6-box">
+                    <p class="text-xl font-bold mb-3">6. ما هي الوظيفة الأساسية لخلايا شوان (الخلايا الدبقية) في النسيج العصبي؟</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q6" value="a"> أ) إنتاج الطاقة العضلية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q6" value="b"> ب) عزل المحور وتسريع نقل السيال العصبي</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q6" value="c"> ج) نقل الإشارات من المستقبلات الحسية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q6" value="d"> د) تخزين المعلومات في الدماغ</label>
+                </div>
+
+                <!-- Q7 -->
+                <div class="question-box" id="q7-box">
+                    <p class="text-xl font-bold mb-3">7. الأنسجة النباتية المسؤولة عن زيادة قطر وسُمك الجذر والساق هي:</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q7" value="a"> أ) الأنسجة المولدة القمية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q7" value="b"> ب) الأنسجة المولدة البينية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q7" value="c"> ج) الأنسجة المولدة الجانبية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q7" value="d"> د) الأنسجة الأساسية</label>
+                </div>
+
+                <!-- Q8 -->
+                <div class="question-box" id="q8-box">
+                    <p class="text-xl font-bold mb-3">8. أي من الخلايا النباتية الآتية تعتبر خلايا ميتة عند النضج وتوفر صلابة قوية (مثل قشرة الجوز)؟</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q8" value="a"> أ) الخلايا البرنشيمية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q8" value="b"> ب) الخلايا الكولنشيمية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q8" value="c"> ج) الخلايا الإسكلرنشيمية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q8" value="d"> د) الخلايا المرافقة</label>
+                </div>
+
+                <!-- Q9 -->
+                <div class="question-box" id="q9-box">
+                    <p class="text-xl font-bold mb-3">9. نسيج نباتي وعائي يتكون من خلايا حية (أنابيب غربالية وخلايا مرافقة) وينقل الغذاء الجاهز:</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q9" value="a"> أ) الخشب (Xylem)</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q9" value="b"> ب) اللحاء (Phloem)</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q9" value="c"> ج) نسيج البشرة</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q9" value="d"> د) النسيج الكولنشيمي</label>
+                </div>
+
+                <!-- Q10 -->
+                <div class="question-box" id="q10-box">
+                    <p class="text-xl font-bold mb-3">10. خلايا النبات التي تحتوي فجوات كبيرة وتخزن الغذاء (مثل النشا في البطاطا) هي:</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q10" value="a"> أ) الخلايا البرنشيمية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q10" value="b"> ب) الخلايا الإسكلرنشيمية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q10" value="c"> ج) الأوعية الخشبية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q10" value="d"> د) الخلايا المرافقة</label>
+                </div>
+
+                <!-- Q11 -->
+                <div class="question-box" id="q11-box">
+                    <p class="text-xl font-bold mb-3">11. ما هي المادة الشمعية التي يفرزها نسيج البشرة لتقليل فقدان الماء من الأوراق؟</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q11" value="a"> أ) اللغنين</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q11" value="b"> ب) السيليلوز</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q11" value="c"> ج) الكيوتيكل</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q11" value="d"> د) الكلوروفيل</label>
+                </div>
+
+                <!-- Q12 -->
+                <div class="question-box" id="q12-box">
+                    <p class="text-xl font-bold mb-3">12. الثغور في أوراق النباتات تعمل على تبادل الغازات، ويتحكم بفتحها وإغلاقها:</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q12" value="a"> أ) الخلايا المرافقة</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q12" value="b"> ب) الخلايا الحارسة</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q12" value="c"> ج) الشعيرات الجذرية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q12" value="d"> د) القمم النامية</label>
+                </div>
+
+                <!-- Q13 -->
+                <div class="question-box" id="q13-box">
+                    <p class="text-xl font-bold mb-3">13. تلجأ النباتات آكلة الحشرات لافتراس الحشرات لتعويض النقص في بيئتها من عنصر:</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q13" value="a"> أ) الكربون</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q13" value="b"> ب) الأكسجين</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q13" value="c"> ج) الفسفور</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q13" value="d"> د) النيتروجين</label>
+                </div>
+
+                <!-- Q14 -->
+                <div class="question-box" id="q14-box">
+                    <p class="text-xl font-bold mb-3">14. الطريقة الأنسب لتقدير حجم جماعة من نبات الدحنون (كائنات غير متحركة) هي:</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q14" value="a"> أ) المربع القياسي</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q14" value="b"> ب) وضع العلامات وإعادة الصيد (معامل لينكولن)</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q14" value="c"> ج) أطواق التتبع اللاسلكية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q14" value="d"> د) العينة النقطية فقط</label>
+                </div>
+
+                <!-- Q15 -->
+                <div class="question-box" id="q15-box">
+                    <p class="text-xl font-bold mb-3">15. يقل حجم الجماعة الحيوية عندما:</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q15" value="a"> أ) تزداد الولادات والهجرة للداخل</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q15" value="b"> ب) تزداد الوفيات والهجرة للخارج</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q15" value="c"> ج) يتساوى معدل المواليد والوفيات</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q15" value="d"> د) يزداد الغذاء المتاح</label>
+                </div>
+
+                <!-- Q16 -->
+                <div class="question-box" id="q16-box">
+                    <p class="text-xl font-bold mb-3">16. في تجربة، تم اصطياد 100 عصفور ووضع علامات عليها وتركها. بعد فترة تم اصطياد 50 عصفوراً، كان منها 10 عصافير تحمل علامة. بناءً على معامل لينكولن، ما هو الحجم الكلي المقدر للجماعة؟</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q16" value="a"> أ) 1000 عصفور</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q16" value="b"> ب) 500 عصفور</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q16" value="c"> ج) 250 عصفور</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q16" value="d"> د) 150 عصفور</label>
+                </div>
+
+                <!-- Q17 -->
+                <div class="question-box" id="q17-box">
+                    <p class="text-xl font-bold mb-3">17. لمراقبة أنماط وتوزع النمور في الغابات عن بعد دون خطر، يلجأ العلماء غالباً إلى:</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q17" value="a"> أ) الدراسات المسحية المرئية المباشرة (العين المجردة)</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q17" value="b"> ب) المربع القياسي</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q17" value="c"> ج) أطواق التتبع (تثبيت جهاز يرسل موجات راديوية أو للأقمار الصناعية)</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q17" value="d"> د) القطاع الخطي</label>
+                </div>
+
+                <!-- Q18 -->
+                <div class="question-box" id="q18-box">
+                    <p class="text-xl font-bold mb-3">18. ما هي النسبة التقريبية للطاقة التي تنتقل من مستوى غذائي إلى المستوى الذي يليه في السلسلة الغذائية؟</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q18" value="a"> أ) 90%</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q18" value="b"> ب) 50%</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q18" value="c"> ج) 25%</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q18" value="d"> د) 10%</label>
+                </div>
+
+                <!-- Q19 -->
+                <div class="question-box" id="q19-box">
+                    <p class="text-xl font-bold mb-3">19. أي من الأهرامات البيئية الآتية يستحيل أن يكون "مقلوباً" ويكون دائماً معتدلاً قاعدته عريضة؟</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q19" value="a"> أ) هرم الأعداد</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q19" value="b"> ب) هرم الكتلة الحيوية</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q19" value="c"> ج) هرم الطاقة</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q19" value="d"> د) جميعها يمكن أن تكون مقلوبة</label>
+                </div>
+
+                <!-- Q20 -->
+                <div class="question-box" id="q20-box">
+                    <p class="text-xl font-bold mb-3">20. إذا تلوثت البيئة بمبيد حشري (DDT)، في أي مستوى غذائي سيكون تركيز هذا المبيد أعلى ما يمكن؟</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q20" value="a"> أ) المنتجات (كالنباتات المائية)</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q20" value="b"> ب) المستهلكات الأولى (العوالق الحيوانية)</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q20" value="c"> ج) المستهلكات الثانية (الأسماك الصغيرة)</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q20" value="d"> د) المستهلكات الكبرى (مثل الحوت القاتل أو القرش)</label>
+                </div>
+
+                <!-- Q21 -->
+                <div class="question-box" id="q21-box">
+                    <p class="text-xl font-bold mb-3">21. الكائنات التي تحلل الكائنات الميتة وتعيد المواد العضوية للتربة ولا تظهر غالباً في السلسلة الغذائية هي:</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q21" value="a"> أ) المستهلكات الأولى</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q21" value="b"> ب) المحللات (الفطريات والبكتيريا)</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q21" value="c"> ج) المنتجات</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q21" value="d"> د) الطحالب</label>
+                </div>
+
+                <!-- Q22 -->
+                <div class="question-box" id="q22-box">
+                    <p class="text-xl font-bold mb-3">22. في دورة الكربون، ما هي العملية التي تؤدي إلى (إزالة) غاز CO2 من الغلاف الجوي وتثبيته؟</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q22" value="a"> أ) التنفس الخلوي</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q22" value="b"> ب) حرق الوقود الأحفوري</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q22" value="c"> ج) البناء الضوئي</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q22" value="d"> د) تحلل الكائنات الميتة</label>
+                </div>
+
+                <!-- Q23 -->
+                <div class="question-box" id="q23-box">
+                    <p class="text-xl font-bold mb-3">23. ما هو دور "بكتيريا النترتة" في دورة النيتروجين؟</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q23" value="a"> أ) تحويل النيتروجين الجوي إلى أمونيا</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q23" value="b"> ب) تحويل النيتريت إلى نترات لتمتصه النباتات</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q23" value="c"> ج) اختزال النترات لإنتاج النيتروجين الجوي</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q23" value="d"> د) تحليل الكائنات الميتة فقط</label>
+                </div>
+
+                <!-- Q24 -->
+                <div class="question-box" id="q24-box">
+                    <p class="text-xl font-bold mb-3">24. الدورة البيوجيوكيميائية التي يقتصر وجود عنصرها غالباً على الصخور ولا تمر بالغلاف الجوي (بطيئة جداً) هي دورة:</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q24" value="a"> أ) الكربون</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q24" value="b"> ب) الأكسجين</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q24" value="c"> ج) النيتروجين</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q24" value="d"> د) الفسفور</label>
+                </div>
+
+                <!-- Q25 -->
+                <div class="question-box" id="q25-box">
+                    <p class="text-xl font-bold mb-3">25. إذا كان النظام البيئي يحتوي على (شجرة واحدة) يتغذى عليها (1000 حشرة)، تتغذى عليها (50 طائراً). كيف سيكون شكل هرم الأعداد؟</p>
+                    <label class="block cursor-pointer"><input type="radio" name="q25" value="a"> أ) مقلوباً من الأسفل (القاعدة أضيق من المنتصف)</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q25" value="b"> ب) معتدلاً تماماً</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q25" value="c"> ج) مقلوباً تماماً بحيث القاعدة هي الأعرض دائماً</label>
+                    <label class="block cursor-pointer"><input type="radio" name="q25" value="d"> د) هرم الأعداد لا يتأثر بعدد الأفراد أبداً</label>
+                </div>
+
+                <div class="text-center mt-10">
+                    <button type="submit" class="btn-submit hover:scale-105 transform">إرسال الإجابات ومعرفة النتيجة</button>
+                </div>
+
+                <!-- Results Display -->
+                <div id="result-container" class="hidden mt-8 p-6 bg-white border-2 border-[#8c5a35] rounded-xl text-center">
+                    <h3 class="text-3xl font-bold mb-4">نتيجتك هي:</h3>
+                    <p id="score-display" class="text-5xl font-bold text-[#6b2e2e] mb-4">0 / 25</p>
+                    <p id="feedback-msg" class="text-xl"></p>
+                </div>
+            </form>
+        </section>
+        
+        <footer class="text-center mt-16 text-gray-500 border-t border-gray-300 pt-6">
+            <p>جميع الحقوق محفوظة - تم التصميم والإعداد بواسطة <strong>قيس جازي</strong> © 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        // مفتاح الإجابات الصحيحة
+        const answers = {
+            q1: 'b', q2: 'd', q3: 'c', q4: 'b', q5: 'c',
+            q6: 'b', q7: 'c', q8: 'c', q9: 'b', q10: 'a',
+            q11: 'c', q12: 'b', q13: 'd', q14: 'a', q15: 'b',
+            q16: 'b', q17: 'c', q18: 'd', q19: 'c', q20: 'd',
+            q21: 'b', q22: 'c', q23: 'b', q24: 'd', q25: 'a'
+        };
+
+        document.getElementById('quizForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let score = 0;
+            let answeredAll = true;
+
+            // التأكد من الإجابة على جميع الأسئلة وتلوينها
+            for (let i = 1; i <= 25; i++) {
+                const questionName = 'q' + i;
+                const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+                const box = document.getElementById(questionName + '-box');
+                
+                // إعادة التهيئة
+                box.classList.remove('bg-green-100', 'bg-red-100', 'border-green-500', 'border-red-500');
+                
+                if (selectedOption) {
+                    if (selectedOption.value === answers[questionName]) {
+                        score++;
+                        box.classList.add('bg-green-100', 'border-green-500');
+                    } else {
+                        box.classList.add('bg-red-100', 'border-red-500');
+                        // إظهار الإجابة الصحيحة
+                        const correctLabel = box.querySelector(`input[value="${answers[questionName]}"]`).parentNode;
+                        correctLabel.style.color = 'green';
+                        correctLabel.style.fontWeight = 'bold';
+                    }
+                } else {
+                    answeredAll = false;
+                }
+            }
+
+            if (!answeredAll) {
+                alert("يرجى الإجابة على جميع الأسئلة قبل الإرسال!");
+                return;
+            }
+
+            // عرض النتيجة
+            const resultContainer = document.getElementById('result-container');
+            const scoreDisplay = document.getElementById('score-display');
+            const feedbackMsg = document.getElementById('feedback-msg');
+            
+            scoreDisplay.textContent = `${score} / 25`;
+            
+            if (score === 25) {
+                feedbackMsg.textContent = "ممتاز جداً! لقد أتقنت المادة بامتياز.";
+                feedbackMsg.className = "text-xl text-green-600 font-bold";
+            } else if (score >= 20) {
+                feedbackMsg.textContent = "رائع! مستواك جيد جداً، راجع الأخطاء البسيطة.";
+                feedbackMsg.className = "text-xl text-blue-600 font-bold";
+            } else if (score >= 12) {
+                feedbackMsg.textContent = "جيد، ولكن تحتاج إلى مراجعة الملخص مرة أخرى.";
+                feedbackMsg.className = "text-xl text-yellow-600 font-bold";
+            } else {
+                feedbackMsg.textContent = "تحتاج إلى دراسة المادة بتركيز أكبر، لا تيأس وحاول مجدداً!";
+                feedbackMsg.className = "text-xl text-red-600 font-bold";
+            }
+
+            resultContainer.classList.remove('hidden');
+            resultContainer.scrollIntoView({ behavior: 'smooth' });
+
+            // تعطيل الاختيارات بعد الإرسال
+            const allInputs = document.querySelectorAll('input[type="radio"]');
+            allInputs.forEach(input => input.disabled = true);
+            document.querySelector('.btn-submit').disabled = true;
+            document.querySelector('.btn-submit').classList.add('opacity-50', 'cursor-not-allowed');
+        });
+    </script>
+</body>
+</html>
